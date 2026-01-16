@@ -23,3 +23,8 @@ module "nat" {
   vpc_id = module.vpc.vpc_id
   IGW = module.vpc.IGW
 }
+
+module "SG" {
+  source = "../Modules/SG"
+  vpc_id = module.vpc.vpc_id
+}
